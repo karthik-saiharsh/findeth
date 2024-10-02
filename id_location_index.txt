@@ -1,0 +1,18 @@
+1 => Academic Blocks
+2 => Hostels
+3 => Canteens
+4 => Halls
+5 => Facilities
+6 => Misc
+7 => Labs
+8 => Banks and ATMs
+
+
+Structure of JSON Files:
+{
+    title: "", // Name of the location
+    content: "", // Description of Location
+    image: "AB1.jpg", // Path to Image. Just name of file in res folder is sufficient
+    latitude: "10.900442", // Latitude of Location
+    longitude: "76.902771", // Longitude of Location
+}

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Findeth-Academic Blocks</title>
+        <style> 
+            @font-face {
+                font-family: jakarta;
+                src: url("../resources/jakarta.ttf");
+            }
+
+            @font-face {
+                font-family: inter;
+                src: url("../resources/inter.ttf");
+            }
+
+            * {
+                padding: 0px;
+                margin: 0px;
+                box-sizing: border-box;
+                scroll-behavior: smooth;
+                transition: all 250ms ease;
+            }
+
+            *::-webkit-scrollbar {
+                width: 0.3rem;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            *::-webkit-scrollbar-track {
+                background-color: #e0f1ff;
+            }
+
+            *::-webkit-scrollbar-thumb {
+                background-color: #262F40;
+                height: 50px;
+            }
+            
+            html {
+                font-size: 16px;
+                overflow-x: hidden;
+            }
+
+            body {
+                overflow-x: hidden;
+            }
+            
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 80vw;
+                height: 7rem;
+            }
+
+            .headerBG {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                height: fit-content;
+                background-color: #262f40;
+                padding-bottom: 0.2rem;
+            }
+
+            .header p {
+                font-family: jakarta;
+                color: #ffffff;
+                font-weight: bold;
+                font-size: 2rem;
+                /* margin-left: 3rem; */
+            }
+            
+            .btn {
+                font-family: jakarta;
+                color: #262f40;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1rem;
+                padding: 0.5rem 1rem 0.5rem 1rem;
+                background-color: #f1faff;
+                border-radius: 10px;
+                margin: 0.3rem;
+                transition: all 250ms ease;
+                text-align: center;
+            }
+
+            .btn:hover {
+                background-color: #f9f871;
+                scale: 1.1;
+            }
+
+            .back:hover {
+                background-color: #8ada81;
+                scale: 1.1;
+            }
+
+            .side-btns {
+                display: flex;
+                gap: 2rem;
+                /* margin-right: 3rem; */
+            }
+
+            .infoBox {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                /* height: fit-contentx */
+                margin: 3rem 0rem 3rem 0rem;
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                row-gap: 0.5rem;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .img {
+                border-radius: 30px;
+                box-shadow: 0px 0px 50px #262F40;
+                width: 320px;
+                height: 240px;
+            }
+            
+            .content-odd {
+                width: 45rem;
+                font-family: inter;
+                font-size: 1rem;
+                color: #262f40;
+                /* font-weight: 500; */
+                text-align: center;
+                padding-bottom:2rem;
+            }
+
+            .content-even {
+                width: 45rem;
+                font-family: inter;
+                font-size: 1rem;
+                color: #262f40;
+                /* font-weight: 500; */
+                text-align: center;
+                padding-bottom:2rem;
+            }
+
+            .title {
+                width: 50rem;
+                font-family: jakarta;
+                font-size: 2rem;
+                font-weight: bold;
+                color: #262f40;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .pic {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .showBtn {
+                padding: 0.5rem 3rem 0.5rem 3rem;
+                font-family: jakarta;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1rem;
+                background-color: #262f40;
+                border-radius: 10px;
+                margin: 0.3rem;
+                transition: all 250ms ease;
+                text-align: center;
+                transition: all 300ms ease;
+                cursor: pointer;
+                margin: 1rem;
+            }
+
+            .showBtn:hover {
+                background-color: #556c96;
+                scale: 1.1;
+            }
+
+            @media screen and (max-width: 1300px) {
+                .title {
+                    width: 30rem;
+                }
+                .content-odd{
+                    width: 25rem;
+                    text-align: center;
+                }
+                .content-even{
+                    width: 25rem;
+                    text-align: center;
+                }
+            }
+
+            @media screen and (max-width: 900px) {
+                .infoBox {
+                    flex-direction: column;
+                    margin: 3rem 0rem 3rem 0rem;
+                    width: 100vw;
+                }
+
+                .img {
+                    margin: 2rem;
+                }
+
+                .header p {
+                    font-size: 1.8rem;
+                }
+            }
+
+            @media screen and (max-width: 700px) {
+                .header {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 10rem;
+                    padding: 0;
+                    margin: 0;
+                    height: fit-content;
+                }
+
+                .header p {
+                    font-size: 1.7rem;
+                    padding: 0;
+                    margin: 1rem;
+                }
+
+                .side-btns {
+                    flex-direction: column;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0rem;
+                }
+
+                .btn {
+                    font-size: .9rem;
+                    padding: 0.5rem 2rem 0.5rem 2rem;
+                }
+
+                .showBtn {
+                    padding: 1rem 3rem 1rem 3rem;
+                }
+            }
+
+            @media screen and (max-width: 500px) {
+                .title {
+                    font-size: 1.3rem;
+                    width: 25rem;
+                }
+
+                .content-odd {
+                    font-size: 1rem;
+                    width: 20rem;
+                }
+
+                .content-even {
+                    font-size: 1rem;
+                    width: 20rem;
+                }
+
+                .img {
+                    width: 280px;
+                    height: 200px;
+                }
+
+                .showBtn {
+                    font-size: .9rem;
+                    padding: 1rem 4rem 1rem 4rem;
+                }
+
+                .btn {
+                    font-size: .9rem;
+                    padding: 1rem 4rem 1rem 4rem;
+                }
+            }
+
+            /* @media screen and (max-width: 350px) {
+                .header {
+                    width: 120vw;
+                }
+            } */
+        </style>
+    </head>
+    <body id="page">
+
+        <div class="headerBG">
+            <div class="header">
+                <p id="page_title"></p>
+                <div class="side-btns">
+                    <a href="../home/index.html" class="btn back">Go Back</a>
+                    <a href="" class="btn">View All Locations</a>
+                </div>
+            </div>
+        </div>
+        <img src="" alt="">
+        <!--CODE BELOW THIS POINT IS PUT THERE FOR DEVELOPMENT PURPOSE-->
+        <!-- <div class="headerBG">
+            <div class="header">
+                <p id="page_title">Academic Blocks</p>
+                <div class="side-btns">
+                    <a href="../home/index.html" class="btn back">Go Back</a>
+                    <a href="" class="btn">View All Locations</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="infoBox">
+            <div class="text">
+                <div class="title">Academic Block 1</div>
+                <div class="content-odd">
+                    India, officially the Republic of India, 
+                    is a country in South Asia. It is the seventh-largest 
+                    country by area; the most populous country from June 2023 and 
+                    from the time of its independence in 1947, the world's 
+                    most populous democracy.
+                </div>
+            </div>
+            <div class="pic">
+                <img src="res/AB1.jpg" class="img" width="320" height="240">
+                <a class="showBtn">View on Map</a>
+            </div>
+        </div>
+
+        <div class="infoBox">
+            <div class="pic">
+                <img src="res/AB1.jpg" class="img" width="320" height="240">
+                <a class="showBtn">View on Map</a>
+            </div>
+            <div class="text">
+                <div class="title">Academic Block 1</div>
+                <div class="content-even">
+                    India, officially the Republic of India, 
+                    is a country in South Asia. It is the seventh-largest 
+                    country by area; the most populous country from June 2023 and 
+                    from the time of its independence in 1947, the world's 
+                    most populous democracy.
+                </div>
+            </div>
+        </div> -->
+        <script src="../1/info.js"></script>
+        <script src="../2/info.js"></script>
+        <script src="../3/info.js"></script>
+        <script src="../4/info.js"></script>
+        <script src="../5/info.js"></script>
+        <script src="../6/info.js"></script>
+        <script src="../7/info.js"></script>
+        <script src="../8/info.js"></script>
+        <script src="loader.js"></script>
+    </body>
+</html>
