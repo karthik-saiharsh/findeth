@@ -44,6 +44,7 @@ function load_details(details) {
             sessionStorage.setItem("lat", details[i]['latitude']);
             sessionStorage.setItem("long", details[i]['longitude']);
             sessionStorage.setItem("location_name", details[i]['title']);
+            sessionStorage.setItem("from", "info");
             open("../map/index.html", "_self");
         };
 

@@ -62,3 +62,14 @@ function setMap() {
     marker.addTo(map);
     marker.bindPopup(sessionStorage.getItem("location_name"));
 }
+
+
+function go_back() {
+    let prev = sessionStorage.getItem("from");
+    if(prev == "info") {
+        open("../info/main.html", "_self");
+    }
+    if(prev == "locs") {
+        open("../locs/index.html", "_self");
+    }
+}

@@ -1,5 +1,6 @@
 let route; // Global Variable for route
 let map; // Global Variable for map
+let dropdownMenu = document.getElementById("dropdown");
 
 function fetchData() {
     setMap();
@@ -27,6 +28,21 @@ function setMap() {
 
     for(let i=1; i<all_places.length; i++) {
         new L.Marker([parseFloat(all_places[i]["latitude"]), parseFloat(all_places[i]["longitude"])]).addTo(map).bindPopup(all_places[i]["name"]);
-    }
 
+        let opt = document.createElement('option');
+        opt.innerHTML = all_places[i]["name"];
+        opt.value  = `${all_places[i]["name"]}+${all_places[i]["latitude"]}+${all_places[i]["longitude"]}`;
+        dropdownMenu.appendChild(opt);
+    }
+}
+
+
+function showPlace(event) {
+    let info = event.target.value;
+    info = info.trim().split("+");
+    sessionStorage.setItem("location_name", info[0]);
+    sessionStorage.setItem("lat", info[1]);
+    sessionStorage.setItem("long", info[2]);
+    sessionStorage.setItem("from", "locs");
+    open("../map/index.html", "_self");
 }
