@@ -7,6 +7,36 @@ function fetchData() {
     document.getElementById("page_title").innerHTML = sessionStorage.getItem("location_name");
 }
 
+if (!navigator.geolocation) {
+    alert("Location service is not available!!");
+}
+
+function error() {
+    alert("Unable to fetch your location. Please make sure that location access is allowed for this site.");
+}
+
+function success(position) {
+    try{
+        // Removes old path if one already exists
+        map.removeControl(route);
+    } catch (e) {
+        console.log(e);
+    }
+
+    route = L.Routing.control( {
+        waypoints: [
+            L.latLng(position.coords.latitude, position.coords.longitude),
+            L.latLng(parseFloat(sessionStorage.getItem("lat")), parseFloat(sessionStorage.getItem("long")))
+        ],
+        routeWhileDragging: false
+    });
+
+    route.addTo(map);
+}
+
+function getRoute() {
+    navigator.geolocation.getCurrentPosition(success, error);
+}
 
 function updateMapHeight() {
     let hero = document.getElementById("header");
