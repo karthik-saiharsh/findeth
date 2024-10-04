@@ -151,6 +151,35 @@
                 scale: 1.1;
             }
 
+            .all-locs {
+                width: 100vw;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+            }
+
+            .btns {
+                text-decoration: none;
+                color: #ffffff;
+                padding: 0.5rem 2rem 0.5rem 2rem;
+                background-color: #262F40;
+                border-radius: 10px;
+                font-family: jakarta;
+                font-weight: bold;
+                font-size: 1rem;
+                transition: all 300ms ease;
+                margin: 0 1rem 0 1rem;
+            }
+
+            .btns:hover {
+                background-color: #7080a1;
+                scale: 1.1;
+            }
+
             @media screen and (max-width: 1450px) {
                 .buttons a {
                     margin: 0 0.5rem 0 0.5rem;
@@ -172,6 +201,11 @@
                 }
 
                 .buttons a {
+                    font-size: 1.1rem;
+                    padding: 2rem 3rem 2rem 3rem;
+                }
+
+                .btns {
                     font-size: 1.1rem;
                     padding: 2rem 3rem 2rem 3rem;
                 }
@@ -207,6 +241,11 @@
                     font-size: 1.1rem;
                     padding: 2rem 0rem 2rem 0rem;
                 }
+
+                .btns {
+                    padding: 2rem 0rem 2rem 0rem;
+                    width: 80vw;
+                }
             }
         </style>
     </head>
@@ -238,6 +277,11 @@
                 </div>
             </div>
         </div>
-    
+
+        
+        <div class="all-locs">
+            <a href="" class="btns">View All Locations</a>
+        </div>
+        
     </body>
 </html>
