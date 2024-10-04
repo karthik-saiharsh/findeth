@@ -1,11 +1,11 @@
 var information_id3 = [
-  "", // Page Title Here
+  "Canteens", // Page Title Here
   {
-    title: "", // Name of the location
-    content: "", // Description of place
-    image: "", // Just enter the name of image file with extension. No need of full path
-    latitude: "", // Latitude of the place
-    longitude: "", // Longitude of the place
+    title: "Main Canteen", // Name of the location
+    content: "Main canteen offers a wide variety of veg and non veg food. Timings: 10am - 8pm", // Description of place
+    image: "main.jpg", // Just enter the name of image file with extension. No need of full path
+    latitude: "10.900127", // Latitude of the place
+    longitude: "76.903698", // Longitude of the place
   },
 ];
 

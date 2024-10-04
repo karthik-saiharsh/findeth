@@ -1,7 +1,7 @@
 var information_id5 = [
   "", // Page Title Here
   {
-    title: "", // Name of the location
+    title: "Page Under Construction", // Name of the location
     content: "", // Description of place
     image: "", // Just enter the name of image file with extension. No need of full path
     latitude: "", // Latitude of the place
