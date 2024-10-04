@@ -18,9 +18,9 @@ A simple and easy to use Navigation System for Amrita Vishwa Vidyapeetham, Coimb
 ## Authors
 
 - [@Karthik Saiharsh](https://github.com/KS-the-visionary)
-- Kavinesh
-- Pooja Shree
-- Aswath Siddharth
+- [@Kavinesh](https://github.com/Kavinesh11)
+- [@Pooja Shree](https://github.com/Pooja29Shree)
+- [@Aswath Siddharth](https://github.com/aswath-siddharth)
 
 
 ## Try it out at
