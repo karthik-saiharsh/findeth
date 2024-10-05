@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findeth - Reviews</title>
+    <style>
+        @font-face {
+            font-family: jakarta;
+            src: url('../resources/jakarta.ttf');
+        }
+
+        body {
+            font-family: jakarta, sans-serif;
+            background-color: #e0f1ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .review-container {
+            position: relative;
+            background-color: #ffffff;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .review-form {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #262F40;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 1rem;
+            color: #262F40;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+            border: 2px solid #e0f1ff;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #262F40;
+        }
+
+        button {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #262F40;
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #7080a1;
+            transform: translateY(-3px);
+        }
+
+        .background-shape {
+            position: absolute;
+            z-index: 0;
+        }
+
+        .circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #e0f1ff;
+        }
+
+        .circle-1 {
+            top: -75px;
+            left: -75px;
+        }
+
+        .circle-2 {
+            bottom: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background-color: #262F40;
+            opacity: 0.1;
+        }
+
+        .rectangle {
+            width: 200px;
+            height: 100px;
+            background-color: #262F40;
+            opacity: 0.05;
+            transform: rotate(45deg);
+            top: 50%;
+            left: -100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="review-container">
+        <div class="background-shape circle circle-1"></div>
+        <div class="background-shape circle circle-2"></div>
+        <div class="background-shape rectangle"></div>
+        <div class="review-form">
+            <h1>Share Your Thoughts</h1>
+            <form id="reviewForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="response">Your Review:</label>
+                <textarea id="response" name="response" rows="4" required></textarea>
+
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const response = document.getElementById('response').value;
+
+            // Get existing reviews from localStorage or initialize an empty array
+            let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+            // Add new review
+            reviews.push({ name, email, response });
+
+            // Save updated reviews to localStorage
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+
+            alert('Thank you for your review! It has been submitted successfully.');
+            this.reset();
+
+            // Log the reviews (for debugging purposes)
+            console.log('Current reviews:', reviews);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findeth - View Reviews</title>
+    <style>
+        @font-face {
+            font-family: jakarta;
+            src: url('../resources/jakarta.ttf');
+        }
+
+        body {
+            font-family: jakarta, sans-serif;
+            background-color: #e0f1ff;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: #262F40;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0f1ff;
+        }
+
+        th {
+            background-color: #262F40;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+
+        .export-btn {
+            display: block;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            background-color: #262F40;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .export-btn:hover {
+            background-color: #7080a1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Submitted Reviews</h1>
+    <table id="reviewsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Response</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <button id="exportBtn" class="export-btn">Export to Excel</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script>
+        function loadReviews() {
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            const tbody = document.querySelector('#reviewsTable tbody');
+            
+            reviews.forEach(review => {
+                const row = document.createElement('tr');
+                ['name', 'email', 'response'].forEach(key => {
+                    const td = document.createElement('td');
+                    td.textContent = review[key];
+                    row.appendChild(td);
+                });
+                tbody.appendChild(row);
+            });
+        }
+
+        function exportToExcel() {
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            const ws = XLSX.utils.json_to_sheet(reviews);
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, "Reviews");
+            XLSX.writeFile(wb, 'reviews.xlsx');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadReviews);
+        document.getElementById('exportBtn').addEventListener('click', exportToExcel);
+    </script>
+</body>
+</html>
