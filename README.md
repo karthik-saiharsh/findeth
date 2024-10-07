@@ -1,4 +1,3 @@
-
 # Findeth
 
 A simple and easy to use Navigation System for Amrita Vishwa Vidyapeetham, Coimbatore.
@@ -12,7 +11,6 @@ A simple and easy to use Navigation System for Amrita Vishwa Vidyapeetham, Coimb
 - Live previews of all locations and fast access
 - Contains all academic blocks, canteens, and other locations from around the college
 - Regularly Updated
-
 
 
 ## Authors
