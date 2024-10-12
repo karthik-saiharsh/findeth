@@ -41,11 +41,7 @@ function load_details(details) {
         showBtn.className = 'showBtn';
         showBtn.innerHTML = "View on Map";
         showBtn.onclick = function() {
-            sessionStorage.setItem("lat", details[i]['latitude']);
-            sessionStorage.setItem("long", details[i]['longitude']);
-            sessionStorage.setItem("location_name", details[i]['title']);
-            sessionStorage.setItem("from", "info");
-            open("../map/index.html", "_self");
+            open(`../map/index.html?location_name=${details[i]['title']}&lat=${details[i]['latitude']}&long=${details[i]['longitude']}&from=info`, "_self");
         };
 
         text_container.appendChild(title);

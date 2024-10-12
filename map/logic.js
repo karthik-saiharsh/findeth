@@ -1,10 +1,13 @@
 let route; // Global Variable for route
 let map; // Global Variable for map
 
+const search_string = window.location.search;
+const query_params = new URLSearchParams(search_string);
+
 function fetchData() {
     alert("IMPORTANT INFORMATION: Please allow location access if prompted for.");
     setMap();
-    document.getElementById("page_title").innerHTML = sessionStorage.getItem("location_name");
+    document.getElementById("page_title").innerHTML = query_params.get("location_name");
 }
 
 if (!navigator.geolocation) {
@@ -26,7 +29,7 @@ function success(position) {
     route = L.Routing.control( {
         waypoints: [
             L.latLng(position.coords.latitude, position.coords.longitude),
-            L.latLng(parseFloat(sessionStorage.getItem("lat")), parseFloat(sessionStorage.getItem("long")))
+            L.latLng(parseFloat(query_params.get("lat")), query_params.get("long"))
         ],
         routeWhileDragging: false
     });
@@ -56,20 +59,23 @@ function setMap() {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
     map.setView([10.903538, 76.899816], 16);
 
-    latitude = parseFloat(sessionStorage.getItem("lat"));
-    longitude = parseFloat(sessionStorage.getItem("long"));
+    latitude = parseFloat(query_params.get("lat"));
+    longitude = parseFloat(query_params.get("long"));
     marker = new L.Marker([latitude, longitude]);
     marker.addTo(map);
-    marker.bindPopup(sessionStorage.getItem("location_name"));
+    marker.bindPopup(query_params.get("location_name"));
 }
 
 
 function go_back() {
-    let prev = sessionStorage.getItem("from");
+    let prev = query_params.get("from");
     if(prev == "info") {
         open("../info/main.html", "_self");
     }
-    if(prev == "locs") {
+    else if(prev == "locs") {
         open("../locs/index.html", "_self");
+    } else {
+        window.history.back();
+        location.reload();
     }
 }

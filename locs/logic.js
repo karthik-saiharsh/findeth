@@ -40,9 +40,5 @@ function setMap() {
 function showPlace(event) {
     let info = event.target.value;
     info = info.trim().split("+");
-    sessionStorage.setItem("location_name", info[0]);
-    sessionStorage.setItem("lat", info[1]);
-    sessionStorage.setItem("long", info[2]);
-    sessionStorage.setItem("from", "locs");
-    open("../map/index.html", "_self");
+    open(`../map/index.html?location_name=${info[0]}&lat=${info[1]}&long=${info[2]}&from=locs`, "_self");
 }
