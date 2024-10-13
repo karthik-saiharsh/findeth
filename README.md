@@ -25,7 +25,7 @@ A simple and easy to use Navigation System for Amrita Vishwa Vidyapeetham, Coimb
 
 ## Try it out at
 
-[FINDETH](https://ks-the-visionary.github.io/findeth/)
+[FINDETH](https://karthik-saiharsh.github.io/findeth/)
 
 
 ## Acknowledgements
