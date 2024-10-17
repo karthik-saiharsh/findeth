@@ -3,14 +3,14 @@ var information_id6 = [
   {
     title: "Amrita Main gate", // Name of the location
     content: "", // Description of place
-    image: "", // Just enter the name of image file with extension. No need of full path
+    image: "gate.jpeg", // Just enter the name of image file with extension. No need of full path
     latitude: "10.899302", // Latitude of the place
     longitude: "76.900400", // Longitude of the place
   },
   {
     title: "Ettimadi Railway Station", // Name of the location
     content: "", // Description of place
-    image: "", // Just enter the name of image file with extension. No need of full path
+    image: "rail.jpeg", // Just enter the name of image file with extension. No need of full path
     latitude: "10.898300", // Latitude of the place
     longitude: "76.895900", // Longitude of the place
   },

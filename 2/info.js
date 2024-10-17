@@ -3,7 +3,7 @@ var information_id2 = [
   {
     title: "Maithreyi Bhavanam", // Name of the location
     content: "Maithreyi Bhavanam is a girls' hostel at Amrita Vishwa Vidyapeetham, providing well-furnished rooms, 24/7 security, and Wi-Fi access. It features common areas for recreation and study, a dining hall with balanced meals, and regular cleaning services. Located conveniently within the campus, it ensures easy access to academic buildings and other facilities. Wardens and support staff are available to assist students, fostering a supportive community.", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "mb.jpeg", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.900761",
     longitude: "76.901233",
   },
@@ -17,7 +17,7 @@ var information_id2 = [
   {
     title: "Vasishta Bhavanam", // Name of the location
     content: "Vasishta Bhavanam is a boys' hostel at Amrita Vishwa Vidyapeetham, offering well-furnished rooms, 24/7 security, and Wi-Fi access. It includes common areas for recreation and study, as well as a dining hall with nutritious meals. The hostel is conveniently located within the campus, ensuring easy access to academic facilities. Regular cleaning services maintain hygiene. Wardens and support staff are available to assist students", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "vb.jpeg", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.901573",
     longitude: "76.895994",
   },
@@ -31,7 +31,7 @@ var information_id2 = [
   {
     title: "Agasthya Bhavanam", // Name of the location
     content: "Agasthya Bhavanam is a boys' hostel at Amrita Vishwa Vidyapeetham, equipped with furnished rooms, Wi-Fi, and round-the-clock security. It includes recreational and study areas, as well as a dining hall with healthy meal options. The hostel's location ensures convenient access to academic buildings. Regular maintenance ensures cleanliness, and support staff are always available to help students.", // Description
-    image: "agasthya_bhavanam.jpg", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "ab.jpeg", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.902493",
     longitude: "76.896215",
   },
@@ -52,7 +52,7 @@ var information_id2 = [
   {
     title: "Yagnavalkya Bhavanam Annex", // Name of the location
     content: "Yagnavalkya Bhavanam Annex is an extension of the boys' hostel at Amrita Vishwa Vidyapeetham, offering additional living spaces with essential amenities. It includes Wi-Fi, 24/7 security, and common areas for study and recreation. The dining hall serves balanced meals, and the annex is located for convenient access to academic buildings. Regular maintenance and support staff ensure a comfortable living environment.", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "yb.jpeg", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.902788",
     longitude: "76.905057",
   },
@@ -73,7 +73,7 @@ var information_id2 = [
   {
     title: "Kapila Bhavanam", // Name of the location
     content: "Kapila Bhavanam is a boys' hostel at Amrita Vishwa Vidyapeetham, offering well-furnished rooms, Wi-Fi, and 24/7 security. It provides common areas for recreation and study, and a dining hall with balanced meals. The hostel's strategic location ensures easy access to academic buildings. High hygiene standards are maintained through regular cleaning, with support staff available to assist students.", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "kb.jpeg", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.904263",
     longitude: "76.900615",
   },,

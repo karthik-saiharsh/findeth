@@ -35,7 +35,7 @@ var information_id5 = [
   {
     title: "Main Ground", // Name of the location
     content: "This is the central sports ground where students gather for major athletic events, practice sessions, and recreational sports. It’s the site for football matches, athletics, and other outdoor activities.", // Description
-    image: "Main_ground.jpg", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "ground.jpeg", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.9022453",
     longitude: "76.903017",
   },
@@ -107,7 +107,7 @@ var information_id5 = [
   {
     title: "Naturals", // Name of the location
     content: "Located in the Anokha Complex, Naturals is a salon franchise offering grooming services for students and staff. It’s a convenient stop for haircuts and beauty treatments.", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "nat.jpeg", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.901806",
     longitude: "76.901928",
   },
