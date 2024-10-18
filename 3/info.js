@@ -3,7 +3,7 @@ var information_id3 = [
   {
     title: "Main Canteen", // Name of the location
     content: "The largest and most diverse food option on campus, the Main Canteen offers a wide range of dishes, including both vegetarian and non-vegetarian options like chicken. It is a popular spot for students to gather between classes or after long days.", // Description
-    image: "Main_canteen.jpg", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "main.png", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.900127",
     longitude: "76.903698",
   },
