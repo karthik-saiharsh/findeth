@@ -1,9 +1,9 @@
 let route; // Global Variable for route
 let map; // Global Variable for map
-
+let destination; // Global variable refers to destination point
 const search_string = window.location.search;
 const query_params = new URLSearchParams(search_string);
-let marker;
+let marker; // Global variable refers to dynamic Point that updates current position of user
 
 var greenIcon = new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
@@ -46,9 +46,12 @@ function success(position) {
     route = L.Routing.control( {
         waypoints: [
             L.latLng(position.coords.latitude, position.coords.longitude),
-            L.latLng(parseFloat(query_params.get("lat")), query_params.get("long"))
+            L.latLng(parseFloat(query_params.get("lat")), parseFloat(query_params.get("long")))
         ],
-        routeWhileDragging: false
+        routeWhileDragging: false,
+        createMarker: function (i, waypoint, n) {
+            return null
+        }
     });
 
     route.addTo(map);
@@ -63,8 +66,13 @@ function update_marker(position) {
     }
     marker = new L.Marker([position.coords.latitude, position.coords.longitude], {icon: greenIcon});
     marker.addTo(map);
-    marker.bindPopup("You are here");
+    marker.bindPopup("You are here", {autoClose: false});
+    marker.openPopup();
+    destination.openPopup();
 
+    new L.Popup().setLatLng([(position.coords.latitude+parseFloat(query_params.get("lat")))/2, (position.coords.longitude+parseFloat(query_params.get("long")))/2])
+    .setContent("Follow the red path to reach your destination. The green marker moves as you move")
+    .openOn(map);
 }
 
 function getRoute() {
@@ -92,9 +100,9 @@ function setMap() {
 
     latitude = parseFloat(query_params.get("lat"));
     longitude = parseFloat(query_params.get("long"));
-    marker = new L.Marker([latitude, longitude]);
-    marker.addTo(map);
-    marker.bindPopup(query_params.get("location_name"));
+    destination = new L.Marker([latitude, longitude]);
+    destination.addTo(map);
+    destination.bindPopup(query_params.get("location_name"), {autoClose: false});
 }
 
 
