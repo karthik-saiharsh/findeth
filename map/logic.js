@@ -7,7 +7,7 @@ const query_params = new URLSearchParams(search_string);
 var options_for_map = {
     enableHighAccuracy: true,
     timeout: 10_000,
-    maximumAge: 10_000
+    maximumAge: 5_000
 }
 
 function fetchData() {
@@ -43,7 +43,15 @@ function success(position) {
     route.addTo(map);
 }
 
+function update_marker(position) {
+    marker = new L.Marker([position.coords.latitude, position.coords.longitude]);
+    marker.addTo(map);
+    marker.bindPopup("You are here");
+
+}
+
 function getRoute() {
+    navigator.geolocation.getCurrentPosition(success, error, options_for_map);
     navigator.geolocation.watchPosition(success, error, options_for_map);
 }
 
