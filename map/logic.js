@@ -69,15 +69,14 @@ function update_marker(position) {
     marker.bindPopup("You are here", {autoClose: false});
     marker.openPopup();
     destination.openPopup();
-
-    new L.Popup().setLatLng([(position.coords.latitude+parseFloat(query_params.get("lat")))/2, (position.coords.longitude+parseFloat(query_params.get("long")))/2])
-    .setContent("Follow the red path to reach your destination. The green marker moves as you move")
-    .openOn(map);
 }
 
 function getRoute() {
     navigator.geolocation.getCurrentPosition(success, error, options_for_map);
     navigator.geolocation.watchPosition(update_marker, error, options_for_map);
+    new L.Popup().setLatLng([(position.coords.latitude+parseFloat(query_params.get("lat")))/2, (position.coords.longitude+parseFloat(query_params.get("long")))/2])
+    .setContent("Follow the red path to reach your destination. The green marker moves as you move")
+    .openOn(map);
 }
 
 function updateMapHeight() {
