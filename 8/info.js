@@ -17,7 +17,7 @@ var information_id8 = [
   {
     title: "SBI ATM", // Name of the location
     content: "SBI ATM at Amrita Vishwa Vidyapeetham,  provides 24/7 banking services, including cash withdrawals, balance inquiries, and fund transfers. Positioned conveniently within the campus, it serves the financial needs of students, faculty, and staff efficiently. The ATM is regularly serviced to ensure operational reliability. It is monitored for security, ensuring safe transactions at all times.", // Description
-    image: "sbi.atm", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "sbi.jpeg", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.901752",
     longitude: "76.901948",
   },

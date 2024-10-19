@@ -39,6 +39,7 @@ function success(position) {
 
 function getRoute() {
     navigator.geolocation.getCurrentPosition(success, error);
+    setTimeout(getRoute, 30_000);
 }
 
 function updateMapHeight() {
