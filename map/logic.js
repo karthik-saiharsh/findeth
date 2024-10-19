@@ -6,8 +6,8 @@ const query_params = new URLSearchParams(search_string);
 
 var options_for_map = {
     enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0
+    timeout: 10_000,
+    maximumAge: 10_000
 }
 
 function fetchData() {
