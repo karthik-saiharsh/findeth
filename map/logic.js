@@ -3,6 +3,8 @@ let map; // Global Variable for map
 
 const search_string = window.location.search;
 const query_params = new URLSearchParams(search_string);
+let marker;
+
 
 var options_for_map = {
     enableHighAccuracy: true,
@@ -44,6 +46,12 @@ function success(position) {
 }
 
 function update_marker(position) {
+    try {
+        // Removes old marker
+        map.removeLayer(marker);
+    } catch(e) {
+        console.log("Couldn't remove old location");
+    }
     marker = new L.Marker([position.coords.latitude, position.coords.longitude]);
     marker.addTo(map);
     marker.bindPopup("You are here");
