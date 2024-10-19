@@ -52,7 +52,7 @@ function update_marker(position) {
 
 function getRoute() {
     navigator.geolocation.getCurrentPosition(success, error, options_for_map);
-    navigator.geolocation.watchPosition(success, error, options_for_map);
+    navigator.geolocation.watchPosition(update_marker, error, options_for_map);
 }
 
 function updateMapHeight() {
