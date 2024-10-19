@@ -19,7 +19,7 @@ var information_id5 = [
   {
     title: "Central Kitchen", // Name of the location
     content: "12.The Central Kitchen is the heart of food production on campus, preparing meals in bulk for the various canteens. It ensures that food is fresh, healthy, and hygienically prepared.", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "loading.png", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.901404",
     longitude: "76.901254",
   },
@@ -27,7 +27,7 @@ var information_id5 = [
   {
     title: "Amrita Store", // Name of the location
     content: "The campus store where students can purchase daily essentials, stationery, and sometimes snacks. It's a convenient spot for students living on campus to buy what they need without leaving the premises.", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "loading.png", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.901706",
     longitude: "76.901857",
   },
@@ -43,7 +43,7 @@ var information_id5 = [
   {
     title: "Vashishta Bhavanam Ground", // Name of the location
     content: "A secondary sports facility near Vashishta Bhavanam, this ground is used for smaller-scale sports events and informal games. It is a quieter space for physical activities.", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "loading.png", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.901643",
     longitude: "76.894587",
   },
@@ -59,7 +59,7 @@ var information_id5 = [
   {
     title: "Boys Gym 1", // Name of the location
     content: "Located near the Main Ground, Boys Gym 1 is a fitness facility for students focused on strength training and cardiovascular workouts. It’s a popular spot for students looking to stay fit.", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "loading.png", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.901831",
     longitude: "76.902094",
   },
@@ -67,7 +67,7 @@ var information_id5 = [
   {
     title: "Boys Gym 2", // Name of the location
     content: "Situated near Vashishta Bhavanam, Boys Gym 2 offers additional gym equipment and workout spaces, serving students who live in or near this area of the campus.", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "loading.png", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.901499",
     longitude: "76.894800",
   },
@@ -75,7 +75,7 @@ var information_id5 = [
   {
     title: "Childrens Park ", // Name of the location
     content: "A small recreational space designed for staffs and their families, the Children’s Park is a peaceful, green area that offers a break from the academic rigor.", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "loading.png", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.901267",
     longitude: "76.899601",
   },
@@ -91,7 +91,7 @@ var information_id5 = [
   {
     title: "Amma Shrine", // Name of the location
     content: "The Amma Shrine is a serene spiritual center where students can go to meditate or seek peace. It is an integral part of campus life, promoting a sense of calm and reflection.", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "loading.png", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.902171",
     longitude: "76.901073",
   },

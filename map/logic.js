@@ -4,6 +4,12 @@ let map; // Global Variable for map
 const search_string = window.location.search;
 const query_params = new URLSearchParams(search_string);
 
+var options_for_map = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+}
+
 function fetchData() {
     alert("IMPORTANT INFORMATION: Please allow location access if prompted for.");
     setMap();
@@ -38,8 +44,7 @@ function success(position) {
 }
 
 function getRoute() {
-    navigator.geolocation.getCurrentPosition(success, error);
-    setTimeout(getRoute, 30_000);
+    navigator.geolocation.watchPosition(success, error, options_for_map);
 }
 
 function updateMapHeight() {

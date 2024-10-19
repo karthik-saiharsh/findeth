@@ -38,7 +38,7 @@ var information_id2 = [
   {
     title: "Adithi Bhavanam", // Name of the location
     content: "Adithi Bhavanam is a girls' hostel at Amrita Vishwa Vidyapeetham, providing a secure and comfortable living environment. It offers furnished rooms, Wi-Fi, and 24/7 security. Common areas for study and recreation, along with a dining hall serving balanced meals, are available. The hostel is conveniently located within the campus, with regular cleaning services and supportive staff on hand.", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "loading.png", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.907245",
     longitude: "76.898844",
   },
@@ -66,7 +66,7 @@ var information_id2 = [
   {
     title: "Nachiketas Bhavanam", // Name of the location
     content: "Nachiketas Bhavanam is a boys' hostel at Amrita Vishwa Vidyapeetham, equipped with essential amenities and secure living spaces. It includes Wi-Fi, 24/7 security, and common areas for study and recreation. The dining hall serves nutritious meals, and the hostel is conveniently located within the campus. Regular cleaning services and dedicated staff foster a supportive environment.", // Description
-    image: "", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
+    image: "loading.png", // Path to Image (Image has to be rectangular in aspect ratio (16 by 9))
     latitude: "10.900477",
     longitude: "76.904765",
   },
