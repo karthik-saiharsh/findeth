@@ -12,8 +12,7 @@ A simple and easy to use Navigation System for Amrita Vishwa Vidyapeetham, Coimb
 - Live previews of all locations and fast access
 - Contains all academic blocks, canteens, and other locations from around the college
 - Regularly Updated
-
-
+- Project recieved a funding of 25,000/-
 
 ## Authors
 
